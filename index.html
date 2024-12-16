@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROK Wood - Sākums</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.somumaja.lv/uploads/testimonials/5/somu-maja-koks.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: rgba(51, 51, 51, 0.7);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        nav {
+            background-color: rgba(68, 68, 68, 0.7);
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #f5a623;
+            text-decoration: underline;
+        }
+
+        .hero-section {
+            background: url('https://www.somumaja.lv/uploads/testimonials/5/somu-maja-koks.jpg') no-repeat center center/cover;
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .hero-content h2 {
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        .cta-button {
+            background-color: #f5a623;
+            color: white;
+            padding: 12px 25px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: #d97d00;
+        }
+
+        .services-overview {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 150px; /* Kartītes būs zemāk */
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .service-overview-card {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            width: 30%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .mission {
+            background-color: rgba(51, 51, 51, 0.7);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .mission h3 {
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .testimonials {
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .testimonial-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 15px auto;
+            width: 70%;
+        }
+
+        .testimonial-card p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .testimonial-card strong {
+            font-size: 16px;
+            color: #f5a623;
+        }
+
+        footer {
+            background-color: rgba(51, 51, 51, 0.7);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 18px;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #f5a623;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #d97d00;
+        }
+
+        /* Peldošās kartītes stils */
+        .floating-card {
+            position: relative; /* Izmantojam relative pozicionēšanu */
+            top: 50px; /* Atstājam nedaudz vietas zem navigācijas */
+            left: 23%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            width: 50%;  /* Palielināts izmērs */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+            text-align: center;
+            z-index: 2;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        .floating-card h2 {
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .floating-card p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .floating-card .cta-button {
+            background-color: #f5a623;
+            color: white;
+            padding: 12px 25px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .floating-card .cta-button:hover {
+            background-color: #d97d00;
+        }
+
+        /* Uzpeldēšanas animācija */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Poga "Veic pasūtījumu" apakšā pa labi */
+        .order-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #f5a623;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .order-button:hover {
+            background-color: #d97d00;
+        }
+
+       /* Poga "Veic pasūtījumu" apakšā pa labi */
+       .order-button {
+       position: fixed;
+       bottom: 20px;
+       right: 20px;
+       background-color: #f5a623;
+       color: white;
+       text-decoration: none;
+       padding: 12px 25px;
+       border-radius: 8px;
+       font-size: 18px;
+       font-weight: bold;
+       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.order-button:hover {
+    background-color: #d97d00;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ROK Wood</h1>
+        <p>Ilgtspējīgi koka risinājumi augstākās kvalitātes celtniecībai un dizainam. Mēs apvienojam inovācijas ar tradicionālajām vērtībām, lai radītu izcilus produktus, kas atbilst Jūsu vajadzībām.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Sākums</a>
+        <a href="par-mums.html">Par mums</a>
+        <a href="pakalpojumi.html">Pakalpojumi</a>
+        <a href="kontakti.html">Kontakti</a>
+        <a href="koka-kalkulators.html">Aprēķini cenu</a>
+        <a href="veicpasutijumu.html">Veic pasūtījumu</a>
+    </nav>
+
+    <!-- Peldošā kartīte -->
+    <section class="floating-card">
+        <h2>ROK Wood - Viss par koku</h2>
+        <p>ROK Wood piedāvā augstākās kvalitātes koka risinājumus, kas atbilst Jūsu unikālajām prasībām. Sadarbojieties ar mums, lai radītu ilgtspējīgus un estētiskus projektus.</p>
+        <a href="pakalpojumi.html" class="cta-button">Uzzināt vairāk</a>
+    </section>
+
+    <!-- Pakalpojumu pārskats -->
+    <section class="services-overview">
+        <div class="service-overview-card">
+            <h4>Koka dēļu izstrāde</h4>
+            <p>Augstas kvalitātes un ilgtspējīgi koka risinājumi atbilstoši Jūsu vajadzībām.</p>
+        </div>
+        <div class="service-overview-card">
+            <h4>Piegāde visā Latvijā</h4>
+            <p>Ātra un droša piegāde visā valstī.</p>
+        </div>
+        <div class="service-overview-card">
+            <h4>Personalizēti risinājumi</h4>
+            <p>Unikāli risinājumi, kas pielāgoti Jūsu projektam.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 ROK Wood. Visas tiesības aizsargātas.</p>
+        <p><a href="privatuma-politika.html">Privātuma politika</a></p>
+    </footer>
+
+    <!-- Poga "Veic pasūtījumu" -->
+    <a href="veicpasutijumu.html" class="order-button">Veic pasūtījumu</a>
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROK Wood - Par Mums</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.somumaja.lv/uploads/testimonials/5/somu-maja-koks.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: rgba(51, 51, 51, 0.7);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        nav {
+            background-color: rgba(68, 68, 68, 0.7);
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #f5a623;
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-grow: 1;
+            background: rgba(0, 0, 0, 0.5); /* Tumša caurspīdīga fona slānis */
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        section h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Teksta ēna */
+        }
+
+        section p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 0 0 20px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Teksta ēna */
+        }
+
+        .reveal-text {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: revealText 1s ease-out forwards;
+            margin-top: 20px;
+            line-height: 1.8;
+            max-width: 850px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @keyframes revealText {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        footer {
+            background-color: rgba(51, 51, 51, 0.7);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 18px;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #f5a623;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #d97d00;
+        }
+
+
+        /* Fiksēta "Veic pasūtījumu" poga */
+        #orderBox {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .order-button {
+            background-color: #f5a623;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        .order-button:hover {
+            background-color: #d97d00;
+        }
+
+        /* Animācijas efektu pievienošana */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+           /* Poga "Veic pasūtījumu" apakšā pa labi */
+              .order-button {
+              position: fixed;
+              bottom: 20px;
+              right: 20px;
+              background-color: #f5a623;
+              color: white;
+              text-decoration: none;
+              padding: 12px 25px;
+              border-radius: 8px;
+              font-size: 18px;
+              font-weight: bold;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+             }
+
+          .order-button:hover {
+           background-color: #d97d00;
+            }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ROK Wood</h1>
+        <p>Labākie visa veida koka pakalpojumi tieši Tev!</p>
+    </header>
+
+    <!-- Navigācija -->
+    <nav>
+        <a href="index.html">Sākums</a>
+        <a href="par-mums.html">Par mums</a>
+        <a href="pakalpojumi.html">Pakalpojumi</a>
+        <a href="kontakti.html">Kontakti</a>
+        <a href="koka-kalkulators.html">Aprēķini cenu</a>
+        <a href="veicpasutijumu.html">Veic pasūtījumu</a>
+    </nav>
+
+    <!-- Par Mums sekcija -->
+    <section id="about">
+        <h3>Par Mums</h3>
+        <p class="reveal-text" style="animation-delay: 0.3s;">
+            Mūsu uzņēmums, <strong>ROK Wood</strong>, ir vadošais koka izstrādājumu ražotājs Latvijā. Mēs specializējamies augstas kvalitātes koka produktos, kas tiek rūpīgi izstrādāti, lai nodrošinātu izcilus rezultātus un ilgtspējīgu lietojamību.
+        </p>
+
+        <p class="reveal-text" style="animation-delay: 0.6s;">
+            Katrs mūsu produkts tiek veidots ar uzmanību pret detaļām, izmantojot tikai labākos materiālus un modernākās ražošanas metodes. Mēs apņemamies nodrošināt ne tikai lielisku dizainu, bet arī augstu kvalitāti, kas ilgs gadiem ilgi. Mūsu mērķis ir piedāvāt risinājumus, kas atbilst ikviena klienta vajadzībām un vēlmēm.
+        </p>
+
+        <p class="reveal-text" style="animation-delay: 0.9s;">
+            ROK Wood piedāvā arī koka izstrādājumu piegādi visā Latvijā, tāpēc jebkurā vietā un laikā jūs varat saņemt mūsu izstrādājumus tieši pie sava sliekšņa. Pievienojieties mūsu lielajai ģimenei un izmantojiet mūsu pieredzi, lai veidotu savu ideālo koka projektu!
+        </p>
+
+        <p class="reveal-text" style="animation-delay: 1.2s;">
+            Mēs ticam, ka kvalitāte un ilgtspējība ir tas, kas nodrošina mūsu klientiem ilgas attiecības ar mūsu uzņēmumu. Mūsu mērķis ir radīt tādus produktus, kas ir ne tikai skaisti, bet arī praktiski un ilgtspējīgi. Ar mīlestību pret dabu, mēs piedāvājam jums koka risinājumus, kas uzlabos jūsu ikdienas dzīvi.
+        </p>
+
+    </section>
+
+     <footer>
+        <p>&copy; 2024 ROK Wood. Visas tiesības aizsargātas.</p>
+        <p><a href="privatuma-politika.html">Privātuma politika</a></p>
+     </footer>
+
+
+
+    <!-- Poga "Veic pasūtījumu" -->
+    <a href="veicpasutijumu.html" class="order-button">Veic pasūtījumu</a>
+  
+   </body>
+   </html>
